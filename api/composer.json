@@ -1,4 +1,6 @@
 {
+    "name": "jmvs",
+    "description": "java minor version server",
     "require": {
         "symfony/symfony": "^4.0",
         "toin0u/digitalocean-v2": "~2.0",
