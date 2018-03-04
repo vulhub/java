@@ -12,7 +12,7 @@ return [
         // Monolog settings
         'logger' => [
             'name' => 'slim-app',
-            'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/app.log',
+            'path' => isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../var/logs/app.log',
             'level' => \Monolog\Logger::DEBUG,
         ],
 
@@ -24,6 +24,12 @@ return [
                 'key' => $_ENV['API_KEY'],
                 'secret' => $_ENV['API_SECRET']
             ]
+        ],
+
+        'cache' => [
+            'namespace' => 'vulhub',
+            'lifetime' => 60 * 60 * 24,
+            'directory' => __DIR__ . '/../var/cache',
         ]
     ],
 ];

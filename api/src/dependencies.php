@@ -1,6 +1,7 @@
 <?php
 // DIC configuration
 use Slim\Container;
+use Symfony\Component\Cache\Simple\FilesystemCache;
 
 $container = $app->getContainer();
 
@@ -22,4 +23,10 @@ $container['logger'] = function (Container $c) {
 $container['s3'] = function (Container $c) {
     $setting = $c->get('settings')['aws'];
     return new \Aws\S3\S3Client($setting);
+};
+
+$container['cache'] = function (Container $c) {
+    $settings = $c->get('settings')['cache'];
+    $cache = new FilesystemCache($settings['namespace'], $settings['lifetime'], $settings['directory']);
+    return $cache;
 };
