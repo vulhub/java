@@ -3,6 +3,22 @@ import requests
 import os
 import re
 
+DOCKERFILE_TEMPLATE_9 = r'''FROM buildpack-deps:stretch-curl
+
+LABEL maintainer="phithon <root@leavesongs.com>"
+
+ENV FILENAME="%s" JAVA_HOME="/opt/jdk"
+
+RUN set -ex \
+    && mkdir -p ${JAVA_HOME} \
+    && cd ${JAVA_HOME} \
+    && wget -qO- http://api.vulhub.org/download/jdk/9/${FILENAME} | tar xz --strip-components=1 \
+    && update-alternatives --install /usr/bin/java java /opt/jdk/bin/java 100 \
+    && update-alternatives --install /usr/bin/javac javac /opt/jdk/bin/javac 100
+
+WORKDIR ${JAVA_HOME}
+'''
+
 DOCKERFILE_TEMPLATE_8 = r'''FROM buildpack-deps:stretch-curl
 
 LABEL maintainer="phithon <root@leavesongs.com>"
@@ -57,6 +73,7 @@ WORKDIR ${JAVA_HOME}
 session = requests.session()
 base_dir = os.path.dirname(__file__)
 name_pattern = re.compile(r'\-((6|7|8)(u\d+)?)\-')
+name9_pattern = re.compile(r'jdk\-(9([\.\d]+)?)_')
 
 
 def request_filename(version):
@@ -66,9 +83,11 @@ def request_filename(version):
 
 def write_dockerfile(version):
     for filename in request_filename(version):
-        g = name_pattern.search(filename)
-        if g is None: 
-            continue
+        g1 = name_pattern.search(filename)
+        g2 = name9_pattern.search(filename)
+        if g1: g = g1
+        elif g2: g = g2
+        else: continue
 
         template = globals()['DOCKERFILE_TEMPLATE_%d' % version]
         dockerfile = os.path.join(base_dir, 'jdk', '%d' % version, g.group(1), 'Dockerfile')
@@ -79,7 +98,7 @@ def write_dockerfile(version):
 
 
 def main():
-    for version in (6, 7, 8):
+    for version in (6, 7, 8, 9):
         write_dockerfile(version)
 
 
