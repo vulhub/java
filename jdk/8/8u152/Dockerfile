@@ -2,12 +2,12 @@ FROM buildpack-deps:stretch-curl
 
 LABEL maintainer="phithon <root@leavesongs.com>"
 
-ENV JAVA_VERSION="8u20" JAVA_HOME="/opt/jdk"
+ENV FILENAME="jdk-8u152-linux-x64.tar.gz" JAVA_HOME="/opt/jdk"
 
 RUN set -ex \
     && mkdir -p ${JAVA_HOME} \
     && cd ${JAVA_HOME} \
-    && wget -qO- https://vulhub.sgp1.digitaloceanspaces.com/jdk/java8/jdk-${JAVA_VERSION}-linux-x64.tar.gz | tar xz --strip-components=1 \
+    && wget -qO- http://api.vulhub.org/download/jdk/8/${FILENAME} | tar xz --strip-components=1 \
     && update-alternatives --install /usr/bin/java java /opt/jdk/bin/java 100 \
     && update-alternatives --install /usr/bin/javac javac /opt/jdk/bin/javac 100
 
