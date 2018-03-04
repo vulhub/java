@@ -1,2 +1,6 @@
-vendor
-vendor.phar
+/vendor/
+/logs/*
+!/logs/README.md
+.env
+.idea
+.vscode
