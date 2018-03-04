@@ -5,7 +5,7 @@ use Slim\Http\Response;
 
 // Routes
 
-$app->get('/download/{type:jdk|jre}/{version:6|7|8}', function (Request $request, Response $response, array $args) {
+$app->get('/download/{type:jdk|jre}/{version:6|7|8|9}', function (Request $request, Response $response, array $args) {
     $op = ['Bucket' => 'vulhub', 'Prefix' => "{$args['type']}/java{$args['version']}/", 'Delimiter' => '/'];
     $key = md5($op['Prefix']);
     if($this->cache->has($key)) {
@@ -28,7 +28,7 @@ $app->get('/download/{type:jdk|jre}/{version:6|7|8}', function (Request $request
     return $response->withJson($list);
 });
 
-$app->get('/download/{type:jdk|jre}/{version:6|7|8}/{name:[a-z0-9_\.\-]+}', function (Request $request, Response $response, array $args) {
+$app->get('/download/{type:jdk|jre}/{version:6|7|8|9}/{name:[a-z0-9_\.\-]+}', function (Request $request, Response $response, array $args) {
     $url = $this->s3->getObjectUrl('vulhub', "{$args['type']}/java{$args['version']}/{$args['name']}");
     return $response->withRedirect($url);
 });
