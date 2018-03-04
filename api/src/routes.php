@@ -20,7 +20,7 @@ $app->get('/download/{type:jdk|jre}/{version:6|7|8}', function (Request $request
     return $response->withJson(iterator_to_array($list));
 });
 
-$app->get('/download/{type:jdk|jre}/{version:6|7|8}/{name}', function (Request $request, Response $response, array $args) {
+$app->get('/download/{type:jdk|jre}/{version:6|7|8}/{name:[a-z0-9_\.\-]+}', function (Request $request, Response $response, array $args) {
     $url = $this->s3->getObjectUrl('vulhub', "{$args['type']}/java{$args['version']}/{$args['name']}");
     return $response->withRedirect($url);
 });
