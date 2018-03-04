@@ -1,4 +1,4 @@
-# Oracle Java images
+# Openjdk images
 
 Supported tags and respective Dockerfile links
 
