@@ -7,7 +7,7 @@ ENV FILENAME="jdk-6u29-linux-x64.bin" JAVA_HOME="/opt/jdk"
 RUN set -ex \
     && mkdir -p ${JAVA_HOME} \
     && cd ${JAVA_HOME} \
-    && wget -O jdk.bin http://api.vulhub.org/download/jdk/6/${FILENAME} \
+    && wget -q -O jdk.bin http://api.vulhub.org/download/jdk/6/${FILENAME} \
     && chmod +x jdk.bin \
     && yes | ./jdk.bin \
     && rm -rf jdk.bin \
