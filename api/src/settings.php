@@ -26,6 +26,14 @@ return [
             ]
         ],
 
+        'aliyun' => [
+            'endpoint' => 'oss-cn-shanghai.aliyuncs.com',
+            'credentials' => [
+                'key' => $_ENV['API_KEY'],
+                'secret' => $_ENV['API_SECRET']
+            ]
+        ],
+
         'cache' => [
             'namespace' => 'vulhub',
             'lifetime' => 60 * 60 * 24,

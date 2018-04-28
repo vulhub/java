@@ -25,6 +25,12 @@ $container['s3'] = function (Container $c) {
     return new \Aws\S3\S3Client($setting);
 };
 
+$container['aliyun'] = function (Container $c) {
+    $setting = $c->get('settings')['aliyun'];
+    
+    return new \OSS\OssClient($setting['credentials']['key'], $setting['credentials']['secret'], $setting['endpoint']);
+};
+
 $container['cache'] = function (Container $c) {
     $settings = $c->get('settings')['cache'];
     $cache = new FilesystemCache($settings['namespace'], $settings['lifetime'], $settings['directory']);
