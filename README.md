@@ -2,6 +2,8 @@
 
 Supported tags and respective Dockerfile links
 
+- Java 10
+    - `10.0.1-jdk` ([jdk/10/10.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/10/10.0.1/Dockerfile))
 - Java 9
     - `9.0.0-jdk` ([jdk/9/9/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9/Dockerfile))
     - `9.0.1-jdk` ([jdk/9/9.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9.0.1/Dockerfile))
@@ -33,6 +35,8 @@ Supported tags and respective Dockerfile links
     - `8u152-jdk` ([jdk/8/8u152/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u152/Dockerfile))
     - `8u161-jdk` ([jdk/8/8u161/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u161/Dockerfile))
     - `8u162-jdk` ([jdk/8/8u162/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u162/Dockerfile))
+    - `8u171-jdk` ([jdk/8/8u171/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u171/Dockerfile))
+    - `8u172-jdk` ([jdk/8/8u172/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u172/Dockerfile))
 - Java 7
     - `7u0-jdk` ([jdk/7/7/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/7/7/Dockerfile))
     - `7u1-jdk` ([jdk/7/7u1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/7/7u1/Dockerfile))
