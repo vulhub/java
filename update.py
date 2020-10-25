@@ -2,7 +2,7 @@
 import requests
 import os
 import re
-from .constant import *
+from constant import *
 
 
 session = requests.session()
