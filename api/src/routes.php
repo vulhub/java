@@ -5,7 +5,7 @@ use Slim\Http\Response;
 use \Slim\Exception\NotFoundException;
 
 // Routes
-$app->get('/download/{type:jdk|jre}/{version:6|7|8|9|10}', function (Request $request, Response $response, array $args) {
+$app->get('/download/{type:jdk|jre}/{version:6|7|8|9|10|11|12|13|14|15}', function (Request $request, Response $response, array $args) {
     $op = ['prefix' => "{$args['type']}/{$args['version']}/", 'delimiter' => '/', 'max-keys' => 1000];
     $key = md5($op['prefix']);
     if($this->cache->has($key)) {
@@ -26,7 +26,7 @@ $app->get('/download/{type:jdk|jre}/{version:6|7|8|9|10}', function (Request $re
     return $response->withJson($list);
 });
 
-$app->get('/download/{type:jdk|jre}/{version:6|7|8|9|10}/{name:[a-z0-9_\.\-]+}', function (Request $request, Response $response, array $args) {
+$app->get('/download/{type:jdk|jre}/{version:6|7|8|9|10|11|12|13|14|15}/{name:[a-z0-9_\.\-]+}', function (Request $request, Response $response, array $args) {
     $object = "{$args['type']}/{$args['version']}/{$args['name']}";
     $key = md5($object);
     if($this->cache->has($key)) {
