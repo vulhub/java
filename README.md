@@ -2,10 +2,36 @@
 
 Supported tags and respective Dockerfile links
 
+- Java 15
+    - `15-jdk` ([jdk/15/15/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/15/15/Dockerfile))
+- Java 14
+    - `14-jdk` ([jdk/14/14/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/14/14/Dockerfile))
+    - `14.0.1-jdk` ([jdk/14/14.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/14/14.0.1/Dockerfile))
+    - `14.0.2-jdk` ([jdk/14/14.0.2/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/14/14.0.2/Dockerfile))
+- Java 13
+    - `13-jdk` ([jdk/13/13/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/13/13/Dockerfile))
+    - `13.0.1-jdk` ([jdk/13/13.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/13/13.0.1/Dockerfile))
+    - `13.0.2-jdk` ([jdk/13/13.0.2/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/13/13.0.2/Dockerfile))
+- Java 12
+    - `12-jdk` ([jdk/12/12/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/12/12/Dockerfile))
+    - `12.0.1-jdk` ([jdk/12/12.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/12/12.0.1/Dockerfile))
+    - `12.0.2-jdk` ([jdk/12/12.0.2/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/12/12.0.2/Dockerfile))
+- Java 11
+    - `11-jdk` ([jdk/11/11/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11/Dockerfile))
+    - `11.0.1-jdk` ([jdk/11/11.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.1/Dockerfile))
+    - `11.0.2-jdk` ([jdk/11/11.0.2/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.2/Dockerfile))
+    - `11.0.3-jdk` ([jdk/11/11.0.3/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.3/Dockerfile))
+    - `11.0.4-jdk` ([jdk/11/11.0.4/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.4/Dockerfile))
+    - `11.0.5-jdk` ([jdk/11/11.0.5/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.5/Dockerfile))
+    - `11.0.6-jdk` ([jdk/11/11.0.6/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.6/Dockerfile))
+    - `11.0.7-jdk` ([jdk/11/11.0.7/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.7/Dockerfile))
+    - `11.0.8-jdk` ([jdk/11/11.0.8/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/11/11.0.8/Dockerfile))
 - Java 10
+    - `10-jdk` ([jdk/10/10/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/10/10/Dockerfile))
     - `10.0.1-jdk` ([jdk/10/10.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/10/10.0.1/Dockerfile))
+    - `10.0.2-jdk` ([jdk/10/10.0.2/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/10/10.0.2/Dockerfile))
 - Java 9
-    - `9.0.0-jdk` ([jdk/9/9/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9/Dockerfile))
+    - `9-jdk` ([jdk/9/9/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9/Dockerfile))
     - `9.0.1-jdk` ([jdk/9/9.0.1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9.0.1/Dockerfile))
     - `9.0.4-jdk` ([jdk/9/9.0.4/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/9/9.0.4/Dockerfile))
 - Java 8
@@ -37,6 +63,16 @@ Supported tags and respective Dockerfile links
     - `8u162-jdk` ([jdk/8/8u162/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u162/Dockerfile))
     - `8u171-jdk` ([jdk/8/8u171/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u171/Dockerfile))
     - `8u172-jdk` ([jdk/8/8u172/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u172/Dockerfile))
+    - `8u181-jdk` ([jdk/8/8u181/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u181/Dockerfile))
+    - `8u201-jdk` ([jdk/8/8u201/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u201/Dockerfile))
+    - `8u202-jdk` ([jdk/8/8u202/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u202/Dockerfile))
+    - `8u211-jdk` ([jdk/8/8u211/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u211/Dockerfile))
+    - `8u212-jdk` ([jdk/8/8u212/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u212/Dockerfile))
+    - `8u221-jdk` ([jdk/8/8u221/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u221/Dockerfile))
+    - `8u231-jdk` ([jdk/8/8u231/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u231/Dockerfile))
+    - `8u241-jdk` ([jdk/8/8u241/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u241/Dockerfile))
+    - `8u251-jdk` ([jdk/8/8u251/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u251/Dockerfile))
+    - `8u261-jdk` ([jdk/8/8u261/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/8/8u261/Dockerfile))
 - Java 7
     - `7u0-jdk` ([jdk/7/7/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/7/7/Dockerfile))
     - `7u1-jdk` ([jdk/7/7u1/Dockerfile](https://github.com/vulhub/java/blob/master/jdk/7/7u1/Dockerfile))
